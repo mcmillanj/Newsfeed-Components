@@ -20,17 +20,7 @@ let menuItems = [
     </ul>
   </div>
 
-  
-
-  
-
-  
-
-  
-
- 
-
-  
+    
 */
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:*/
@@ -69,4 +59,5 @@ menuDiv.classList.toggle('menu--open');
 
   const menu = menuMaker(menuItems);
   const makeHeader = document.querySelector('.header');
-  makeHeader.prepend.add(menu);
+  // console.log(menu);
+  makeHeader.appendChild(menu);

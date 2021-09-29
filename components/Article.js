@@ -102,40 +102,35 @@ const data = [
 
     <span class="expandButton">+</span>
   </div>
-
-  
-
-  .
-
-  Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
-  Refresh the page to see the new article.
+    
 */
-function articleMaker({article}){
+function articleMaker(data){
 const Article = document.createElement('div');
-const title =document.createElement('h2');
+const title = document.createElement('h2');
 const theDate = document.createElement('p');
-const p1 = document.createElement('p');
-const p2 = document.createElement('p');
-const p3 = document.createElement('p');
+const para1 = document.createElement('p');
+const para2 = document.createElement('p');
+const para3 = document.createElement('p');
 const span =  document.createElement('span');
 
 
-// Article.appendChild('div');
+//  Article.appendChild('div');
 Article.appendChild(title);
 Article.appendChild(theDate);
-Article.appendChild(p1);
-Article.appendChild(p2);
-Article.appendChild(p3);
+Article.appendChild(para1);
+Article.appendChild(para2);
+Article.appendChild(para3);
 Article.appendChild(span);
 
 Article.classList.add('article');
 theDate.classList.add('date');
 span.classList.add('expandButton');
-title.textContent = Article.title;
-theDate.textContent = Date;
-p1.textContent = Article.firstParagraph;
-p2.textContent = Article.secondParagraph;
-p3.textContent = Article.thirdParagraph;
+title.textContent =data.title;
+// console.log( Article.title);
+theDate.textContent = data.date;
+para1.textContent = data.firstParagraph;
+para2.textContent = data.secondParagraph;
+para3.textContent = data.thirdParagraph;
 span.textContent = '+';
 
 
@@ -144,7 +139,7 @@ span.textContent = '+';
   This listener should toggle the class 'article-open' on div.article.*/
 
 span.addEventListener('click', event => {
-  Article.classList.toggle("article-open");
+  Article.classList.toggle('article-open');
 });
 // Step 3: Don't forget to return something from your function!
 
